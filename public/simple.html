@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Database Management Interface</title>
+</head>
+
+<body>
+    <header>
+        <h1>Employee Database</h1>
+        <p>Use this interface to interact with and update the database.</p>
+    </header>
+    <h2>Add new employee</h2>
+    <form action="/add" method="POST">
+        <fieldset>
+            <label>Employee ID</label>
+            <input type="text" id='empID' name="id" required>
+            <label>Name</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h2>View an employee</h2>
+    <form action="/view" method="POST">
+        <fieldset>
+            <label>Employee ID</label>
+            <input type="text" id="empID" name="id" required>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h2>Update an employee</h2>
+    <form action="/update" method="POST">
+        <fieldset>
+            <label>Employee ID</label>
+            <input type="text" id='empID' name="id" required>
+            <label>New Name</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h2>Delete an employee</h2>
+    <form action="/delete" method="POST">
+        <fieldset>
+            <label>Employee ID</label>
+            <input type="text" id='empID' name="id" required>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h2>Show all employees</h2>
+    <form action="/showAll" method="POST">
+        <fieldset>
+            <button type="submit">Show All</button>
+        </fieldset>
+    </form>
+
+    <h2>Close connection to database</h2>
+    <form action="/close" method="GET">
+        <fieldset>
+            <button type="submit">Close connection</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
